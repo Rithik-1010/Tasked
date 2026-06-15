@@ -52,7 +52,7 @@ const Login = () => {
               <input
                 {...register('email', { required: 'Email is required', pattern: { value: /^\S+@\S+$/i, message: 'Invalid email' } })}
                 type="email"
-                className="w-full px-6 py-4 rounded-xl bg-transparent border border-[var(--color-border)] text-white text-base focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all placeholder:text-[var(--color-text-muted)]/50 leading-relaxed"
+                className="w-full h-14 px-6 rounded-xl bg-transparent border border-[var(--color-border)] text-white text-lg focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all placeholder:text-[var(--color-text-muted)]/50"
                 placeholder="you@example.com"
                 autoComplete="email"
               />
@@ -64,7 +64,7 @@ const Login = () => {
               <input
                 {...register('password', { required: 'Password is required' })}
                 type="password"
-                className="w-full px-6 py-4 rounded-xl bg-transparent border border-[var(--color-border)] text-white text-base focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all placeholder:text-[var(--color-text-muted)]/50 leading-relaxed"
+                className="w-full h-14 px-6 rounded-xl bg-transparent border border-[var(--color-border)] text-white text-lg focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all placeholder:text-[var(--color-text-muted)]/50"
                 placeholder="••••••••"
                 autoComplete="current-password"
               />
@@ -74,7 +74,7 @@ const Login = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-4 rounded-xl bg-gradient-to-r from-[#C084FC] to-[#A855F7] text-white text-base font-medium btn-shine glow-violet hover:scale-[1.02] transition-all disabled:opacity-50"
+              className="w-full h-14 rounded-xl bg-gradient-to-r from-[#C084FC] to-[#A855F7] text-white text-lg font-medium btn-shine glow-violet hover:scale-[1.02] transition-all disabled:opacity-50"
             >
               {loading ? (
                 <span className="flex items-center justify-center gap-2">

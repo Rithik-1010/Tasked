@@ -145,7 +145,7 @@ const Tasks = () => {
               onChange={(e) => { updateFilters({ search: e.target.value }); }}
               onKeyDown={(e) => e.key === 'Enter' && fetchTasks()}
               placeholder="Search tasks..."
-              className="w-full pl-12 pr-6 py-4 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-base focus:outline-none focus:border-[var(--color-accent)]/50 transition-all leading-relaxed"
+              className="w-full h-14 pl-12 pr-6 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-lg focus:outline-none focus:border-[var(--color-accent)]/50 transition-all"
             />
           </div>
 
@@ -153,7 +153,7 @@ const Tasks = () => {
           <select
             value={filters.status}
             onChange={(e) => { updateFilters({ status: e.target.value }); setTimeout(() => fetchTasks(), 0); }}
-            className="px-6 py-4 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-base focus:outline-none focus:border-[var(--color-accent)]/50 transition-all leading-relaxed"
+            className="h-14 px-6 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-lg focus:outline-none focus:border-[var(--color-accent)]/50 transition-all"
           >
             <option value="">All Status</option>
             <option value="pending">Pending</option>
@@ -165,7 +165,7 @@ const Tasks = () => {
           <select
             value={filters.priority}
             onChange={(e) => { updateFilters({ priority: e.target.value }); setTimeout(() => fetchTasks(), 0); }}
-            className="px-6 py-4 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-base focus:outline-none focus:border-[var(--color-accent)]/50 transition-all leading-relaxed"
+            className="h-14 px-6 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-lg focus:outline-none focus:border-[var(--color-accent)]/50 transition-all"
           >
             <option value="">All Priority</option>
             <option value="low">Low</option>
@@ -177,7 +177,7 @@ const Tasks = () => {
           <select
             value={filters.category}
             onChange={(e) => { updateFilters({ category: e.target.value }); setTimeout(() => fetchTasks(), 0); }}
-            className="px-6 py-4 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-base focus:outline-none focus:border-[var(--color-accent)]/50 transition-all leading-relaxed"
+            className="h-14 px-6 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-lg focus:outline-none focus:border-[var(--color-accent)]/50 transition-all"
           >
             <option value="">All Categories</option>
             <option value="Work">Work</option>
@@ -191,7 +191,7 @@ const Tasks = () => {
           <select
             value={filters.sort}
             onChange={(e) => { updateFilters({ sort: e.target.value }); setTimeout(() => fetchTasks(), 0); }}
-            className="px-6 py-4 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-base focus:outline-none focus:border-[var(--color-accent)]/50 transition-all leading-relaxed"
+            className="h-14 px-6 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-lg focus:outline-none focus:border-[var(--color-accent)]/50 transition-all"
           >
             <option value="newest">Newest</option>
             <option value="oldest">Oldest</option>

@@ -70,7 +70,7 @@ const TaskModal = ({ isOpen, onClose, onSubmit, task = null, loading = false }) 
                 <label className="block text-left w-full text-sm font-medium text-[var(--color-text-secondary)] mb-2">Title</label>
                 <input
                   {...register('title', { required: 'Title is required' })}
-                  className="w-full px-6 py-4 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-base focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all placeholder:text-[var(--color-text-muted)]/50 leading-relaxed"
+                  className="w-full h-14 px-6 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-lg focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all placeholder:text-[var(--color-text-muted)]/50"
                   placeholder="What needs to be done?"
                 />
                 {errors.title && <span className="text-xs text-red-400 mt-1.5 block text-left">{errors.title.message}</span>}
@@ -82,7 +82,7 @@ const TaskModal = ({ isOpen, onClose, onSubmit, task = null, loading = false }) 
                 <textarea
                   {...register('description')}
                   rows={3}
-                  className="w-full px-6 py-4 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-base focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all resize-none placeholder:text-[var(--color-text-muted)]/50 leading-relaxed"
+                  className="w-full p-5 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-lg focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all resize-none placeholder:text-[var(--color-text-muted)]/50"
                   placeholder="Add details..."
                 />
               </div>
@@ -93,7 +93,7 @@ const TaskModal = ({ isOpen, onClose, onSubmit, task = null, loading = false }) 
                   <label className="block text-left w-full text-sm font-medium text-[var(--color-text-secondary)] mb-2">Priority</label>
                   <select
                     {...register('priority')}
-                    className="w-full px-6 py-4 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-base focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all leading-relaxed"
+                    className="w-full h-14 px-6 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-lg focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all"
                   >
                     <option value="low">Low</option>
                     <option value="medium">Medium</option>
@@ -104,7 +104,7 @@ const TaskModal = ({ isOpen, onClose, onSubmit, task = null, loading = false }) 
                   <label className="block text-left w-full text-sm font-medium text-[var(--color-text-secondary)] mb-2">Status</label>
                   <select
                     {...register('status')}
-                    className="w-full px-6 py-4 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-base focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all leading-relaxed"
+                    className="w-full h-14 px-6 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-lg focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all"
                   >
                     <option value="pending">Pending</option>
                     <option value="in-progress">In Progress</option>
@@ -119,7 +119,7 @@ const TaskModal = ({ isOpen, onClose, onSubmit, task = null, loading = false }) 
                   <label className="block text-left w-full text-sm font-medium text-[var(--color-text-secondary)] mb-2">Category</label>
                   <select
                     {...register('category')}
-                    className="w-full px-6 py-4 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-base focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all leading-relaxed"
+                    className="w-full h-14 px-6 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-lg focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all"
                   >
                     <option value="General">General</option>
                     <option value="Work">Work</option>
@@ -134,7 +134,7 @@ const TaskModal = ({ isOpen, onClose, onSubmit, task = null, loading = false }) 
                   <input
                     type="date"
                     {...register('dueDate')}
-                    className="w-full px-6 py-4 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-base focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all leading-relaxed"
+                    className="w-full h-14 px-6 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-lg focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all"
                   />
                 </div>
               </div>
@@ -144,7 +144,7 @@ const TaskModal = ({ isOpen, onClose, onSubmit, task = null, loading = false }) 
                 <label className="block text-left w-full text-sm font-medium text-[var(--color-text-secondary)] mb-2">Tags (comma separated)</label>
                 <input
                   {...register('tags')}
-                  className="w-full px-6 py-4 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-base focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all placeholder:text-[var(--color-text-muted)]/50 leading-relaxed"
+                  className="w-full h-14 px-6 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-lg focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all placeholder:text-[var(--color-text-muted)]/50"
                   placeholder="design, frontend, urgent"
                 />
               </div>
@@ -155,7 +155,7 @@ const TaskModal = ({ isOpen, onClose, onSubmit, task = null, loading = false }) 
                 <textarea
                   {...register('notes')}
                   rows={2}
-                  className="w-full px-6 py-4 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-base focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all resize-none placeholder:text-[var(--color-text-muted)]/50 leading-relaxed"
+                  className="w-full p-5 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-lg focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all resize-none placeholder:text-[var(--color-text-muted)]/50"
                   placeholder="Additional notes..."
                 />
               </div>
@@ -165,14 +165,14 @@ const TaskModal = ({ isOpen, onClose, onSubmit, task = null, loading = false }) 
                 <button
                   type="button"
                   onClick={onClose}
-                  className="flex-1 py-4 rounded-xl border border-[var(--color-border)] text-base font-medium hover:bg-[var(--color-surface-2)] transition-all"
+                  className="flex-1 h-14 rounded-xl border border-[var(--color-border)] text-lg font-medium hover:bg-[var(--color-surface-2)] transition-all"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={loading}
-                  className="flex-1 py-4 rounded-xl bg-gradient-to-r from-[#C084FC] to-[#A855F7] text-white text-base font-medium btn-shine glow-violet hover:scale-[1.02] transition-all disabled:opacity-50"
+                  className="flex-1 h-14 rounded-xl bg-gradient-to-r from-[#C084FC] to-[#A855F7] text-white text-lg font-medium btn-shine glow-violet hover:scale-[1.02] transition-all disabled:opacity-50"
                 >
                   {loading ? (
                     <span className="flex items-center justify-center gap-2">

@@ -68,7 +68,7 @@ const Profile = () => {
             <label className="block text-left w-full text-xs font-medium text-[var(--color-text-muted)] mb-1.5">Name</label>
             <input
               {...regProfile('name', { required: 'Name is required' })}
-              className="w-full px-6 py-3.5 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-base focus:outline-none focus:border-[var(--color-accent)]/50 transition-all leading-relaxed"
+              className="w-full h-14 px-6 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-lg focus:outline-none focus:border-[var(--color-accent)]/50 transition-all"
             />
             {profileErrors.name && <span className="text-xs text-red-400 block text-left">{profileErrors.name.message}</span>}
           </div>
@@ -77,11 +77,11 @@ const Profile = () => {
             <input
               {...regProfile('email', { required: 'Email is required' })}
               type="email"
-              className="w-full px-6 py-3.5 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-base focus:outline-none focus:border-[var(--color-accent)]/50 transition-all leading-relaxed"
+              className="w-full h-14 px-6 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-lg focus:outline-none focus:border-[var(--color-accent)]/50 transition-all"
             />
             {profileErrors.email && <span className="text-xs text-red-400 block text-left">{profileErrors.email.message}</span>}
           </div>
-          <button type="submit" disabled={saving} className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#C084FC] to-[#A855F7] text-white text-base font-medium btn-shine hover:scale-[1.02] transition-all disabled:opacity-50">
+          <button type="submit" disabled={saving} className="px-6 h-14 rounded-xl bg-gradient-to-r from-[#C084FC] to-[#A855F7] text-white text-lg font-medium btn-shine hover:scale-[1.02] transition-all disabled:opacity-50">
             {saving ? 'Saving...' : 'Save Changes'}
           </button>
         </form>
@@ -96,7 +96,7 @@ const Profile = () => {
             <input
               {...regPw('currentPassword', { required: 'Current password is required' })}
               type="password"
-              className="w-full px-6 py-3.5 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-base focus:outline-none focus:border-[var(--color-accent)]/50 transition-all leading-relaxed"
+              className="w-full h-14 px-6 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-lg focus:outline-none focus:border-[var(--color-accent)]/50 transition-all"
             />
             {pwErrors.currentPassword && <span className="text-xs text-red-400 block text-left">{pwErrors.currentPassword.message}</span>}
           </div>
@@ -105,11 +105,11 @@ const Profile = () => {
             <input
               {...regPw('newPassword', { required: 'New password is required', minLength: { value: 6, message: 'Min 6 characters' } })}
               type="password"
-              className="w-full px-6 py-3.5 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-base focus:outline-none focus:border-[var(--color-accent)]/50 transition-all leading-relaxed"
+              className="w-full h-14 px-6 rounded-xl bg-[var(--color-surface-1)] border border-[var(--color-border)] text-lg focus:outline-none focus:border-[var(--color-accent)]/50 transition-all"
             />
             {pwErrors.newPassword && <span className="text-xs text-red-400 block text-left">{pwErrors.newPassword.message}</span>}
           </div>
-          <button type="submit" disabled={changingPw} className="px-6 py-3.5 rounded-xl border border-[var(--color-border)] text-base font-medium hover:bg-[var(--color-surface-2)] transition-all disabled:opacity-50">
+          <button type="submit" disabled={changingPw} className="px-6 h-14 rounded-xl border border-[var(--color-border)] text-lg font-medium hover:bg-[var(--color-surface-2)] transition-all disabled:opacity-50">
             {changingPw ? 'Changing...' : 'Change Password'}
           </button>
         </form>
